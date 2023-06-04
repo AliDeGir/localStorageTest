@@ -21,6 +21,7 @@ function checkLocal() {
 
     if (document.getElementById('code').value === credTwo) {
         alert("Password match");
+        document.getElementsById('hidden-div').style.display= "grid"
     }
 }
 
