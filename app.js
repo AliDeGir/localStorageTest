@@ -9,15 +9,14 @@ function reGister() {
     nickOne = document.getElementById('nick').value;
     passOne = document.getElementById('pass').value;
 
-    localStorage.setItem(nickOne, passOne);
+    localStorage.setItem('passwordOne', passOne);
 
     alert("Saved!");
 }
 
 function checkLocal() {
-    credOne = localStorage.getItem(nickOne);
-    credTwo = localStorage.getItem(passOne);
-    alert("Helo");
+    credOne = localStorage.getItem('passwordOne');
+    alert("Hello");
     alert(credOne);
 
     // if (getElementById('pass').value === credTwo) {
