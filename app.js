@@ -15,11 +15,11 @@ function reGister() {
 }
 
 function checkLocal() {
-    credOne = localStorage.getItem('passwordOne');
+    credTwo = localStorage.getItem('passwordOne');
     alert("Hello");
     alert(credOne);
 
-    // if (getElementById('pass').value === credTwo) {
-    //     alert("Correct password!")
-    // }
+    if (document.getElementById('pass').value === credTwo) {
+        alert("Password match");
+    }
 }
