@@ -23,3 +23,7 @@ function checkLocal() {
         alert("Password match");
     }
 }
+
+function clearButton() {
+    localStorage.clear();
+}
