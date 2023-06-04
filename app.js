@@ -17,11 +17,9 @@ function getInfo() {
 }
 
 function checkLocal() {
-    credTwo = localStorage.getItem('passwordOne');
-    alert("Hello");
-    alert(credOne);
+    credTwo = localStorage.getItem('pass');
 
-    if (document.getElementById('pass').value === credTwo) {
+    if (document.getElementById('code').value === credTwo) {
         alert("Password match");
     }
 }
