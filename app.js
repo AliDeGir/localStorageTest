@@ -2,15 +2,16 @@ function reGister() {
     nickOne = document.getElementById('nick').value;
     passOne = document.getElementById('pass').value;
 
+    localStorage.setItem('nickOne', nickOne);
     localStorage.setItem('passwordOne', passOne);
 
-    alert("Saved!");
+    alert(nickOne + " " + passOne + "Saved!");
 }
 
 function getInfo() {
     nickName = document.getElementById('nick').value;
     passWord = document.getElementById('pass').value;
-    alert(nickName + " " + passWord);
+    alert("info found in local storage " + nickName + " " + passWord);
     
 }
 
@@ -26,4 +27,6 @@ function checkLocal() {
 
 function clearButton() {
     localStorage.clear();
+
+    alert("Local storage cleared!")
 }
