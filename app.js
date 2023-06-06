@@ -13,6 +13,10 @@ function getInfo() {
     let pass_code = localStorage.getItem("pass");
     
     alert("info found in local storage " + nick_name + " " + pass_code);
+
+    if (pass_code != "") {
+        document.getElementById('reg-btn').style.display= "none";
+    }
     
 }
 
