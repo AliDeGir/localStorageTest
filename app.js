@@ -14,6 +14,7 @@ function getInfo() {
     
     if (pass_code == null) {
         document.getElementById('reg-btn').style.display= "none";
+        alert("Welcome back!");
     }
     
 }
