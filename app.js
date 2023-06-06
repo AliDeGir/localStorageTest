@@ -12,10 +12,9 @@ function getInfo() {
     let nick_name = localStorage.getItem("name");
     let pass_code = localStorage.getItem("pass");
     
-    alert("info found in local storage " + nick_name + " " + pass_code);
-
     if (pass_code == null) {
         document.getElementById('reg-btn').style.display= "none";
+        alert("Welcome back!");
     }
     
 }
