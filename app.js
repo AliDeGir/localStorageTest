@@ -12,7 +12,7 @@ function getInfo() {
     let nick_name = localStorage.getItem("name");
     let pass_code = localStorage.getItem("pass");
     
-    if (pass_code == null) {
+    if (pass_code != null && pass_code == "") {
         document.getElementById('reg-btn').style.display= "none";
         alert("Welcome back!");
     } else {
