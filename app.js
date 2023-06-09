@@ -2,7 +2,7 @@ function reGister() {
     nickOne = document.getElementById('nick').value;
     passOne = document.getElementById('code').value;
 
-    localStorage.setItem('name', nickOne);
+    localStorage.setItem('nick', nickOne);
     localStorage.setItem('pass', passOne);
 
     alert(nickOne + " " + passOne + " Saved!");
