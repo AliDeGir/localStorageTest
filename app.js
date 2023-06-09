@@ -5,7 +5,7 @@ function reGister() {
     localStorage.setItem('name', nickOne);
     localStorage.setItem('pass', passOne);
 
-    alert(nickOne + " " + passOne + "Saved!");
+    alert(nickOne + " " + passOne + " Saved!");
 }
 
 function getInfo() {
@@ -34,4 +34,11 @@ function clearButton() {
     localStorage.clear();
 
     alert("Local storage cleared!")
+}
+
+function getLocal() {
+    localStoredNick = localStorage.getItem("nick")
+    localStoredPass = localStorage.getItem("pass")
+
+    alert(localStoredNick + " " + localStoredPass)
 }
