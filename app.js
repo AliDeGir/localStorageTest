@@ -35,3 +35,10 @@ function clearButton() {
 
     alert("Local storage cleared!")
 }
+
+function getLocalStorage() {
+    let info1 = localStorage.getItem('nick');
+    let info2 = localStorage.getItem('pass');
+
+    alert(info1 + " " + info2);
+}
