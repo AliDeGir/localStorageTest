@@ -69,7 +69,10 @@ function pageOnload() {
 
     fulPassword = document.getElementById("passInput").value;
 
-    if (storedPass != "" || storedPass != null) {
+    if (fulPassword != "" || fulPassword != null) {
         document.getElementById('registerButton').style.display="none"
+        alert("Registered user!")
+    } else {
+        alert("Not registered user!")
     }
 }
