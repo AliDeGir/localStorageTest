@@ -15,7 +15,10 @@ function loggingIn() {
         if (numberOfPassword != 6) {
             alert("not correct amount of passcode digits!")
         } else {
-            if (fulPassword === "666666") {
+            storedName = localStorage.getItem('name');
+            storedPass = localStorage.getItem('pass');
+
+            if (fulPassword === storedPass) {
                 document.getElementById('visibleDiv').style.background="yellow";
                 document.getElementById('hiddenDiv').style.display="flex";
                 document.getElementById('loginDiv').style.display="none";
@@ -42,8 +45,10 @@ function newMember() {
     if (fulName != "" || fulName != null) {
         if (numberOfPassword == 6) {
             alert(fulName + ", your credentials has been stored!")
+            localStorage.setItem('name', fulName);
+            localStorage.setItem('pass', fulPassword);
         } else {
-            alert("Enter rigt amount of digits!")
+            alert("Enter right amount of digits!")
         }
     } else {
         alert("Nickname field empty of not enough characters!")
@@ -59,5 +64,12 @@ function clearCache() {
 }
 
 function pageOnload() {
-    
+    storedName = localStorage.getItem('name');
+    storedPass = localStorage.getItem('pass');
+
+    fulPassword = document.getElementById("passInput").value;
+
+    if (storedPass != "" || storedPass != null) {
+        document.getElementById('registerButton').style.display="none"
+    }
 }
