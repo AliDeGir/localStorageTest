@@ -27,6 +27,8 @@ function toLogin() {
     if (document.getElementById('code').value === credTwo) {
         alert("Password match");
         document.getElementsById('divToHide').style.display= "grid"
+    } else {
+        alert("No match found!")
     }
 }
 
