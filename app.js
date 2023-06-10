@@ -1,46 +1,63 @@
-function reGister() {
-    nickOne = document.getElementById('nick').value;
-    passOne = document.getElementById('code').value;
+function loggingIn() {
+    fulName = document.querySelector(".name").value;
+    fulPassword = document.getElementById("passInput").value;
 
-    localStorage.setItem('nick', nickOne);
-    localStorage.setItem('pass', passOne);
-
-    alert(nickOne + " " + passOne + " Saved!");
-}
-
-function isLocalStored() {
-    let nickName = localStorage.getItem("name");
-    let passCode = localStorage.getItem("pass");
-    
-    if (passCode != null || passCode != "") {
-        document.getElementById('reg-btn').style.display= "none";
-        alert("Welcome back! " + nickName);
-    } else {
-        alert("Please register!")
+    if (fulName.length < 3) {
+        fulName = null
     }
-    
-}
 
-function toLogin() {
-    credTwo = localStorage.getItem('pass');
-
-    if (document.getElementById('code').value === credTwo) {
-        alert("Password match");
-        document.getElementsById('divToHide').style.display= "grid"
+    if (fulName == "" || fulName == null) {
+        alert("Either empty or null")
     } else {
-        alert("No match found!")
+        alert("Welcome " + fulName);
+        numberOfPassword = fulPassword.length;
+
+        if (numberOfPassword != 6) {
+            alert("not correct amount of passcode digits!")
+        } else {
+            if (fulPassword === "666666") {
+                document.getElementById('visibleDiv').style.background="yellow";
+                document.getElementById('hiddenDiv').style.display="flex";
+                document.getElementById('loginDiv').style.display="none";
+            } else {
+                alert("No match found!");
+            }
+        }
     }
+
+    document.getElementById('nameInput').value="";
+    document.getElementById('passInput').value="";
 }
 
-function clearButton() {
+function newMember() {
+    fulName = document.querySelector(".name").value;
+    fulPassword = document.getElementById("passInput").value;
+
+    numberOfPassword = fulPassword.length;
+
+    if (fulName.length < 3) {
+        fulName = null;
+    }
+
+    if (fulName != "" || fulName != null) {
+        if (numberOfPassword == 6) {
+            alert(fulName + ", your credentials has been stored!")
+        } else {
+            alert("Enter rigt amount of digits!")
+        }
+    } else {
+        alert("Nickname field empty of not enough characters!")
+    }
+
+    document.getElementById('nameInput').value="";
+    document.getElementById('passInput').value="";
+}
+
+function clearCache() {
     localStorage.clear();
-
     alert("Local storage cleared!")
 }
 
-function getLocalStorage() {
-    let info1 = localStorage.getItem('nick');
-    let info2 = localStorage.getItem('pass');
-
-    alert(info1 + " " + info2);
+function pageOnload() {
+    
 }

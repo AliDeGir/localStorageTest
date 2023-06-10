@@ -8,23 +8,17 @@
     <title>Document</title>
 </head>
 <body onload="isLocalStored()">
-    <h1>5</h1>
-    <div class="formShell">
-        <h1>Welcome</h1>
-        <div class="formInner">
-            <input type="text" placeholder="nick" id="nick">
-            <input type="text" placeholder="password" id="code">
-            <button id="reg-btn" onclick="reGister()">Register</button>
-            <button id="log-btn" onclick="toLogin()">Login</button>
-            <button id="clearAll" onclick="clearButton()">Clear</button>
-            <button onclick="getLocalStorage()">Get Local Storage Info</button>
-        </div>
+    <div id="loginDiv">
+        <h1>Login</h1>
+        <input type="text" id="nameInput" class="name" placeholder="Name">
+        <input type="password" id="passInput" class="pass" placeholder="Employee number">
+        <button id="registerButton" onclick="newMember()">Register</button>
+        <button id="loginButton" onclick="loggingIn()">Login</button>
+        <button id="cancelButton" onclick="clearCache()">Clear cache</button>
     </div>
 
-    <div id="divToHide" class="hidden">
-        <h1>This is a hidden div!</h1>
-        <p>This wil be hidden....</p>
-    </div>
+    <div id="visibleDiv">Visible div</div>
+    <div id="hiddenDiv">Hidden div</div>
 
     <script src="app.js"></script>
     
