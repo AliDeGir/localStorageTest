@@ -9,12 +9,12 @@ function reGister() {
 }
 
 function isLocalStored() {
-    let nick_name = localStorage.getItem("name");
-    let pass_code = localStorage.getItem("pass");
+    let nickName = localStorage.getItem("name");
+    let passCode = localStorage.getItem("pass");
     
-    if (pass_code != null || pass_code != "") {
+    if (passCode != null || passCode != "") {
         document.getElementById('reg-btn').style.display= "none";
-        alert("Welcome back!");
+        alert("Welcome back! " + nickName);
     } else {
         alert("Please register!")
     }
