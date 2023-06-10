@@ -71,7 +71,7 @@ function pageOnload() {
 
     if (fulPassword != "" || fulPassword != null) {
         document.getElementById('registerButton').style.display="none"
-        alert("Registered user!")
+        alert("Registered user! " + storedName + " " + storedPass)
     } else {
         alert("Not registered user!")
     }
