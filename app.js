@@ -8,7 +8,7 @@ function reGister() {
     alert(nickOne + " " + passOne + " Saved!");
 }
 
-function getInfo() {
+function isLocalStored() {
     let nick_name = localStorage.getItem("name");
     let pass_code = localStorage.getItem("pass");
     
@@ -21,7 +21,7 @@ function getInfo() {
     
 }
 
-function checkLocal() {
+function toLogin() {
     credTwo = localStorage.getItem('pass');
 
     if (document.getElementById('code').value === credTwo) {
@@ -34,11 +34,4 @@ function clearButton() {
     localStorage.clear();
 
     alert("Local storage cleared!")
-}
-
-function getLocal() {
-    localStoredNick = localStorage.getItem("nick")
-    localStoredPass = localStorage.getItem("pass")
-
-    alert(localStoredNick + " " + localStoredPass)
 }
