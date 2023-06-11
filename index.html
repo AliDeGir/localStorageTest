@@ -7,17 +7,15 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body onload="pageOnload()">
+<body>
     <div id="loginDiv">
         <h1>Login</h1>
         <input type="text" id="nameInput" class="name" placeholder="Name">
         <input type="password" id="passInput" class="pass" placeholder="Employee number">
-        <button id="registerButton" onclick="newMember()">Register</button>
-        <button id="loginButton" onclick="loggingIn()">Login</button>
-        <button id="cancelButton" onclick="clearCache()">Clear cache</button>
+        <button id="loginButton" onclick="logIn()">Login</button>
     </div>
 
-    <div id="visibleDiv">Visible div Count 3</div>
+    <div id="visibleDiv">Visible div Count 4</div>
     <div id="hiddenDiv">Hidden div</div>
 
     <script src="app.js"></script>
